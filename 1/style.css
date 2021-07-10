@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-container {
+    width: 1.6rem;
+    height: 1.6rem;
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.menu-container:hover .menu-line, .menu-container:hover .menu-line::before, .menu-container:hover .menu-line::after {
+    background-color: rgba(22, 21, 21, 0.794);
+}
+
+.menu {
+    width: 100%;
+    height: 100%;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.menu-line {
+    width: 100%;
+    height: 0.2rem;
+    background-color: #000;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-line::before, .menu-line::after {
+    content: '';
+    width: 100%;
+    height: 0.2rem;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+}
+
+.menu-line::before {
+    top: -5px;
+}
+
+.menu-line::after {
+    top: 5px;
+}
+
+.menu-line.active::before {
+    transform: rotate(45deg) translateY(100%) translateX(10%);
+}
+
+.menu-line.active::after {
+    transform: rotate(-45deg) translateY(-100%) translateX(10%);
+}
+
+.list {
+    width: 20%;
+    height: 100vh;
+    background-color: rgba(51, 46, 46, 0.445);
+    padding: 2rem;
+    display: none;
+}
+
+.list ul {
+    list-style-type: none;
+}
+
+.list ul li {
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.list.active {
+    display: block;
+}
+
+.menu-line.active {
+    background-color: transparent;
+}
+
+.menu-container.active:hover .menu-line::before, .menu-container.active:hover .menu-line::after {
+    background-color: rgba(22, 21, 21, 0.794);
+}
+
+.menu-container.active:hover .menu-line {
+    background-color: transparent;
+}
