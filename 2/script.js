@@ -1,16 +1,12 @@
-const inputs = document.querySelectorAll('input');
-// const placeholders = document.querySelectorAll('input').placeholder;
+const email = document.querySelector('#email');
+const label = document.querySelector('.label');
 
-inputs.forEach(input => input.addEventListener('focus', (e) => {
-    // e.target.style.backgroundColor = 'red';
-    // const email = document.querySelector('#email').placeholder;
-    // email.style.color = 'white';
-    // placeholders.forEach(placeholder => placeholders.style.color = 'white');
-    e.target.classList.add('focused');
-}));
+email.addEventListener('focus', () => {
+    label.style.top = '1rem';
+    label.style.fontSize = '.8rem'
+})
 
-inputs.forEach(input => input.addEventListener('blur', (e) => {
-    //     e.target.style.backgroundColor = '';
-    e.target.classList.remove('focused');
-}));
-
+email.addEventListener('blur', () => {
+    label.style.top = '1.4rem';
+    label.style.fontSize = '1rem';
+})
