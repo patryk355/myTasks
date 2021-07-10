@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#form input {
+    display: block;
+    width: 12rem;
+    height: 2.4rem;
+    background-color: rgb(51, 48, 48);
+    padding: .5rem .5rem;
+    margin: 1rem;
+    border-radius: .2rem;
+    color: #fff;
+}
+
+/* #form input:focus {
+    border: none;
+} */
+
+#form input::placeholder {
+    color: rgb(212, 211, 211);
+}
+
+input:focus input::placeholder {
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: flex-end;
+}
