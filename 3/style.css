@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.nav {
+    width: 100%;
+    height: 4rem;
+    background-color: rgb(82, 40, 40);
+}
+
+.list {
+    width: 100%;
+    height: 4rem;
+    list-style-type: none;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    cursor: pointer;
+}
+
+.list li {
+    height: 100%;
+    border-left: 1px solid rgb(104, 52, 52);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list li:hover {
+    background-color: rgba(148, 38, 38, 0.315);
+    opacity: .8;
+    transition: ease-in .3s;
+}
+
+.menu {
+    display: none;
+    width: 100%;
+    height: 18rem;
+    background-color: rgba(56, 26, 5, 0.267);
+    padding: 2rem 17rem;
+}
+
+.menu.active {
+    display: block;
+    transition: ease-in-out 1s 1s;
+}
