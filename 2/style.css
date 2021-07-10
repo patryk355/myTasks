@@ -15,16 +15,17 @@
     color: #fff;
 }
 
-/* #form input:focus {
-    border: none;
-} */
 
 #form input::placeholder {
-    color: rgb(212, 211, 211);
+    color: #fff;
+    width: 100%;
 }
 
-input:focus input::placeholder {
-    padding-bottom: 3rem;
+#form .focused::placeholder {
+    color: rgb(146, 143, 143);
+    padding-bottom: 1rem;
     display: flex;
     justify-content: flex-end;
+    align-items: flex-start;
+    font-size: 0.6rem;
 }
