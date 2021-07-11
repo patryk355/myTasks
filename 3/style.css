@@ -5,9 +5,11 @@
 }
 
 .nav {
+    position: absolute;
     width: 100%;
     height: 4rem;
     background-color: rgb(82, 40, 40);
+    z-index: 1;
 }
 
 .list {
@@ -35,14 +37,21 @@
 }
 
 .menu {
-    display: none;
+    position: absolute;
+    top: 4rem;
+    left: 0;
     width: 100%;
     height: 18rem;
     background-color: rgba(56, 26, 5, 0.267);
     padding: 2rem 17rem;
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: ease transform 1s;
+    z-index: 0;
 }
 
 .menu.active {
-    display: block;
-    transition: ease-in-out 1s 1s;
+    visibility: visible;
+    transform: translateY(0%);
+    transition: ease transform 1s;
 }
