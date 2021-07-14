@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 2rem;
+}
+
+.up, .down {
+    border: 1px solid #000;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.up:hover i, .down:hover i {
+    color: rgb(70, 65, 65);
+}
+
+.divs {
+    margin-top: 2rem;
+}
+
+.item {
+    display: none;
+    width: 30rem;
+    height: 5rem;
+    border: 3px dotted rgb(60, 58, 180);
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.item-1, .item-2 {
+    display: block;
+}
