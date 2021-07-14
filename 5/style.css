@@ -107,3 +107,13 @@ td {
     height: 4rem;
     text-align: center;
 }
+
+.light-body {
+    color: var(--text-light-color);
+    background-color: var(--bg-light-color);
+}
+
+.dark-body {
+    color: var(--text-dark-color);
+    background-color: var(--bg-dark-color);
+}
