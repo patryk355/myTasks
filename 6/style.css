@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form div {
+    margin: 1rem;
+}
+
+.form div * {
+    margin: 0 .5rem;
+}
+
+.passwd-input {
+    display: flex;
+}
+
+.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 1rem;
+    font-size: .7rem;
+    text-align: center;
+    border-radius: 2rem;
+    border: none;
+    background-color: rgb(126, 129, 129);
+    color: #fff;
+    padding: .3rem;
+    cursor: pointer;
+}
+
+.show:hover {
+    background-color: rgb(52, 53, 53);
+}
