@@ -33,23 +33,29 @@ body {
     border: 3px dotted rgb(60, 58, 180);
     margin: 1rem 0;
     padding: 1rem;
+    
 }
 
 .item.animated {
     animation: slideDivs 1s ease;
+    
 }
 
 .item.active {
     display: block;
 }
 
-@keyframes slideDivs {
+ @keyframes slideDivs {
     0% {
-        /* transform: rotate(0deg); */
-        transform: translateY(20%);
-    }
-    100% {
-        transform: translateY(100%);
-        /* transform: rotate(180deg); */
-    }
+        transform: rotate(0deg);
+
+transform: translateY(20%);
 }
+
+100% {
+    transform: translateY(100%);
+    /* transform: rotate(180deg); */
+}
+
+}
+

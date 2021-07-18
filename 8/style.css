@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+}
+
+.container {
+    width: 30rem;
+    height: 12rem;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    /* overflow: hidden; */
+}
+
+.box {
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    background: url('actor.jpg') center/cover no-repeat;
+    overflow: hidden;
+    animation: zoom 1s ease-in-out both;
+    z-index: -1;
+}
+
+.container:hover .img {
+    animation: zoomHover 1s ease-in-out both;
+}
+
+.text {
+    width: 40%;
+    height: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    border-top: 4px #EDBE4B solid;
+}
+
+.container:hover .text {
+    box-shadow: 5px 5px 5px 2px #dfe0df, 5px -5px 19px 0px #dfe0df;
+}
+
+.text h1 {
+    font-size: 1.4rem;
+    color: #EDBE4B;
+}
+
+.text .description {
+    padding: 0.7rem 0;
+}
+
+.box-counter {
+    color: gray;
+    display: flex;
+    justify-content: space-around;
+}
+
+@keyframes zoomHover {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
