@@ -10,17 +10,13 @@ upBtn.addEventListener('click', () => {
             item.classList.remove('active');
             number++;
         }
-
     });
 
-    if (number === items.length) {
-        number = 0;
-    }
+    if (number === items.length) number = 0;
 
     items[number].classList.add('active');
     number++;
     items[number++].classList.add('active');
-
 });
 
 downBtn.addEventListener('click', () => {
@@ -29,13 +25,26 @@ downBtn.addEventListener('click', () => {
             number = item.dataset.number;
             item.classList.remove('active');
             number--;
-            if (number === 0) number = items.length - 1;
+
         }
     });
-    items[number].classList.add('active');
-    if (number === 0) number = items.length - 1;
-    // if (number === items.length ) number = 0;
 
+    if (number === 0) number = items.length - 1;
+
+    items[number].classList.add('active');
     number--;
     items[number--].classList.add('active');
 });
+
+function slideDivs() {
+    items.forEach(item => {
+        item.classList.remove('animated');
+        if (item.classList.contains('active')) {
+            item.classList.add('animated');
+        }
+    });
+}
+
+upBtn.addEventListener('click', slideDivs);
+
+downBtn.addEventListener('click', slideDivs);

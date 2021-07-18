@@ -35,10 +35,21 @@ body {
     padding: 1rem;
 }
 
-/* .item-1, .item-2 {
-    display: block;
-} */
+.item.animated {
+    animation: slideDivs 1s ease;
+}
 
 .item.active {
     display: block;
+}
+
+@keyframes slideDivs {
+    0% {
+        /* transform: rotate(0deg); */
+        transform: translateY(20%);
+    }
+    100% {
+        transform: translateY(100%);
+        /* transform: rotate(180deg); */
+    }
 }
