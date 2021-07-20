@@ -15,20 +15,22 @@
 <body>
     <form action="" class="form">
         <div class="search">
-            <i class="fas fa-search"></i>
-            <input type="text" class="search-input">
+            <button type="submit" class="btn-search"><i class="fas fa-search"></i></button>
+            <input type="text" class="search-input" placeholder="Search...">
         </div>
 
         <div class="add">
             <label for="add-item">Add item: </label>
-            <input type="text" name="add-item" id="add-item">
-            <a href="#"><i class="fas fa-plus"></i></a>
+            <input type="text" name="add-item" id="add-item" placeholder="For example: book" class="add-input">
+            <button type="submit" class="btn-add"><i class="fas fa-plus"></i></button>
         </div>
     </form>
 
+    <p class="info"></p>
+
     <div class="items">
         <ul class="list">
-            
+
         </ul>
     </div>
 
