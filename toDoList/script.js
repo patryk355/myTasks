@@ -2,20 +2,21 @@ const btnAdd = document.querySelector('.btn-add');
 const btnSearch = document.querySelector('.btn-search');
 const ul = document.querySelector('.list');
 const addInput = document.querySelector('.add-input');
+const searchInput = document.querySelector('.search-input');
 const form = document.querySelector('.form');
 const info = document.querySelector('.info');
+
 let number = 1;
 
 
 //Add item to list
 function addItem(e) {
     e.preventDefault();
-    if (addInput.value == '') {
-        info.textContent = 'Wpisz przynajmniej jeden znak';
-    } else {
+    if (addInput.value == '') info.textContent = 'Wpisz przynajmniej jeden znak';
+    else {
         info.textContent = '';
         number = ul.children.length + 1;
-        
+
         // Create list item
         const listItem = document.createElement('li');
         ul.appendChild(listItem);
@@ -44,25 +45,50 @@ function addItem(e) {
 // Delete list item with button
 function removeItem(e) {
     // e.preventDefault();
-    let actualNumber = 1;
+
     this.parentNode.remove();
 
     // Actual number in class
-    const items = document.querySelectorAll('.item');
+    const items = [...document.querySelectorAll('.item')];
     console.log(items);
-    items.forEach(item => {
+    // items.forEach(item => {
+    //     // Remove old class
+    //     item.classList.remove(item.classList.item(1));
+
+    //     // Add actual class
+    //     // actualNumber = ul.children.length;
+    //     item.classList.add(`item-${actualNumber}`);
+    //     actualNumber++;
+    //     // number++;
+    // });
+
+    for (let i = 0; i <= items.length; i++) {
         // Remove old class
-        item.classList.remove(item.classList.item(1));
-        console.log(item.classList.item(1));
+        items[i].classList.remove(items[i].classList.item(1));
 
         // Add actual class
-        item.classList.add(`item-${actualNumber}`);
-        actualNumber++;
-        number++;
-    })
+        items[i].classList.add(`item-${i + 1}`);
+
+    }
+    // console.log(items);
 }
+
+// Search items
+const searchItem = function (e) {
+    const items = [...document.querySelectorAll('.item')];
+    const result = items.filter(item => {
+        const textInside = e.target.value;
+        if (item.outerText.toLowerCase().includes(textInside.toLowerCase())) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
 
 form.addEventListener('submit', addItem);
 btnAdd.addEventListener('click', addItem);
+searchInput.addEventListener('input', searchItem);
 
 
